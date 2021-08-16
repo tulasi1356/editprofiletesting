@@ -1,14 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "e50e7d76-06fd-49c4-868c-432bb628bdd0"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "editfeature": {
+    "profile": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/editfeature",
+            "outputPath": "dist/profile",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "editfeature:build"
+            "browserTarget": "profile:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "editfeature:build:production"
+              "browserTarget": "profile:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "editfeature:build"
+            "browserTarget": "profile:build"
           }
         },
         "test": {
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "editfeature:serve"
+            "devServerTarget": "profile:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "editfeature:serve:production"
+              "devServerTarget": "profile:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "editfeature"
+  "defaultProject": "profile"
 }
