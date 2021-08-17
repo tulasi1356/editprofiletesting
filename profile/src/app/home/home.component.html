@@ -1,0 +1,19 @@
+
+
+
+
+<div class="main-head">
+    <div class="heading">
+        <h1>PICK YOUR TEMPLATE</h1>
+    </div>
+    <div class="gallery-item" *ngFor="let temp of templates let i=index">
+        <img [src]="temp" alt="gallery thumbnail" class="gallery-img" />
+        <button class="btn btn-primary gallery-button">EDIT</button><br>
+        <button class="btn btn-primary gallery-button1">View</button>
+      </div>
+    <!-- <div class="mydivouter"  style="background-image: url({{temp}});">
+    	
+        <button type="button" class="mybuttonoverlap btn btn-info">Read More</button>
+    </div> -->
+</div>
+

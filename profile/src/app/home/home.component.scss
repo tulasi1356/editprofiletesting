@@ -1,0 +1,82 @@
+.main-head {
+    width: 100%;
+    height: 100%;
+    .heading {
+        height: 10%;
+        width: 100%;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 25px;
+    }
+ 
+    .mydivouter{
+        position:relative;
+        width: 200px;
+        height: 120px;
+    }
+    .mybuttonoverlap{
+        position: absolute;
+        z-index: 2;
+        top: 44px;
+        display: none;
+        left: 59px;	
+    }
+    .mydivouter:hover .mybuttonoverlap{ 
+        display:block;
+    }
+}
+.gallery-item {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .gallery-img {
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      width: 400px;
+      height: 400px;
+      margin: 20px;
+  }
+  .gallery-item:hover .gallery-button {
+    opacity: 1; /* change opacity on wrapper div hover */
+  }
+  .gallery-item:hover   .gallery-button1 {
+    //   float: left;
+    opacity: 1; /* change opacity on wrapper div hover */
+  }
+  .gallery-button {
+     opacity: 0;
+    
+    transition: opacity 0.3s ease-in;
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    margin: auto;
+    // background-color: darkred;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .gallery-button1 {
+    opacity: 0;
+    
+   transition: opacity 0.3s ease-in;
+   display: block;
+   position: absolute;
+   width: 160px;
+   height: 40px;
+//    background-color: darkmagenta;
+   margin: auto;
+   top: 100px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   cursor: pointer;
+ }

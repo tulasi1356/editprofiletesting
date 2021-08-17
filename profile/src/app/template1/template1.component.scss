@@ -1,0 +1,20 @@
+.main-head {
+    background-color: darkblue;
+    width: 100%;
+    height: 100%;
+    .logo {
+        height: 20%;
+        background-color: pink;
+        
+    }
+    .mains-section {
+        display: flex;
+        flex-direction: row;
+        .head {
+            width: 30%;
+        }
+        .image-section {
+            width: 70%;
+        }
+    }
+}
