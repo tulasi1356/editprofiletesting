@@ -10,6 +10,7 @@ import { Template1Component } from './template1/template1.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { EditingpageComponent } from './editingpage/editingpage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { EditingpageComponent } from './editingpage/editingpage.component';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
