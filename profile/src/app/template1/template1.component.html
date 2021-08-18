@@ -1,19 +1,21 @@
-<div class="main-head">
-    <div class="logo">
-        <h1 >Jaldeee</h1>
-    </div>
-    <form [formGroup]="form">
-    <div class="mains-section">
-
-        <div class="head">
-            <h1  formControlName="heading"  contenteditable="true">Template Which You can Choose</h1>
-            <button mat-raised-button>Edit</button>
+<body>
+    <div class="container">
+   <div class="row head">
+    <img src="../../assets/logo-white.png" class="image">
+   </div>
+   <div class="row content">
+       <div class="row">
+           <div class="col-lg-6">
+                 <p class="text">Templates Which<br>You Can Choose</p>
+                 <div class="row">
+                    <button class="editbutton col-lg-3" (click)="edit()">Edit</button>
+            </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="../../assets/download.jpg" width="400px" height="500px">
+            </div>
         </div>
-        <div class="image-section">
-            <img src="../../assets/download.jpg">
-        </div>
-        
+   
     </div>
-</form>
-    <div class="gray-section"></div>
 </div>
+</body>

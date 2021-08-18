@@ -9,11 +9,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { Template1Component } from './template1/template1.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { EditingpageComponent } from './editingpage/editingpage.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    Template1Component
+    Template1Component,
+    EditingpageComponent
   ],
   imports: [
     BrowserModule,

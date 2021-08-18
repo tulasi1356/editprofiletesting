@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-template1',
   templateUrl: './template1.component.html',
@@ -9,7 +10,7 @@ import { FormControl } from '@angular/forms';
 export class Template1Component implements OnInit {
   form: any;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private router:Router) {
 
 
     this.form = this.fb.group({
@@ -19,6 +20,10 @@ export class Template1Component implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  edit() {
+    this.router.navigate(['/editingpage']);
+
   }
 
 }
