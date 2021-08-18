@@ -15,9 +15,10 @@ export class HomeComponent implements OnInit {
   public templates = ['../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg',
   '../../assets/download.jpg' ,'../../assets/download.jpg','../../assets/download.jpg' ]
   edit(value:any) {
-    if(value==1) {
+    console.log(value)
+    
+    if(value==0) {
       this.router.navigate(['/template1']);
-      console.log(value)
     }
   }
 

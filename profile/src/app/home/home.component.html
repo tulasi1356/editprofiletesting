@@ -6,10 +6,10 @@
     <div class="heading">
         <h1>PICK YOUR TEMPLATE</h1>
     </div>
-    <div class="gallery-item" *ngFor="let temp of templates let i=index">
+    <div class="gallery-item" *ngFor="let temp of templates let i=index" style="margin-left: 60px;">
         <img [src]="temp" alt="gallery thumbnail" class="gallery-img" />
-        <button class="btn btn-primary gallery-button">EDIT</button><br>
-        <button class="btn btn-primary gallery-button1">View</button>
+        <button class="btn btn-primary gallery-button"  (click)="edit(i)">EDIT</button><br>
+        <button class="btn btn-primary gallery-button1">VIEW</button>
       </div>
     <!-- <div class="mydivouter"  style="background-image: url({{temp}});">
     	
