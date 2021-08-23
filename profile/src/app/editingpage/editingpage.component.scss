@@ -139,4 +139,46 @@ h2::after {
  }
 
 
- 
+ input[type='file'] {
+	opacity:0;
+	display: none; 
+   // display:flex;
+   // align-items:center;  
+  }
+  .doctor-section {
+	  background-color: brown;
+	  margin-top:20px ;
+  }
+  .cardsection {
+	  background-color: white;
+	  width: 500px;
+	  border-radius: 10px;
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	//   justify-content: center;
+  }
+  .image-sec {
+	border-radius: 10px;
+	  background-color: yellow;
+	  align-items: center;
+	  display: flex;
+	  flex-flow: row wrap;
+	//   flex-wrap: wrap-row;
+
+  }
+  .cardimage {
+	  width: 150px;
+	  padding: 10px;
+	  border-radius: 30px;
+  }
+  .allcards {
+	margin:20px
+  }
+  .cardbackground {
+	  padding-top:5%;
+	  background-color: white;
+	  border-radius: 10px;
+	  padding-bottom:5%;
+	  margin-left: 2%;
+  }

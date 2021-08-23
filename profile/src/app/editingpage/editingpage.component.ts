@@ -19,6 +19,7 @@ export class EditingpageComponent implements OnInit {
       cauroselthree: new FormControl('Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum. Michael Holz,Seo Analyst', Validators.required),
       cardtitle: new FormControl('Lorem ipsum dolor sit amet',Validators.required),
       cardtext: new FormControl('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.', Validators.required),
+      doctortext1:new FormControl('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper mal.', Validators.required),
 
       // alternatesubtopics: this.fb.array([], Validators.required)
     })
@@ -30,6 +31,7 @@ export class EditingpageComponent implements OnInit {
     console.log(this.form.value);
   }
   selectFile(event,i) {
+    console.log('i=',i);
     if (event.target.files.length > 0) {
       const file = event.target.files[0]
       this.imagearray[i] = event.target.

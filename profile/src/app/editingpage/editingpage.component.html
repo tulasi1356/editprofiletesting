@@ -139,35 +139,116 @@
         <img  class="gallery-img" src="{{imagearray[0]}}">
         
         <div class="btn btn-primary gallery-button">
-          <input type="file" id="file" formControlName="image" (change)="selectFile($event,0)"><label for="file"
+          <input type="file" id="file" (change)="selectFile($event,0)"><label for="file"
           style="cursor: pointer;">Upload</label>
         </div><br>
       </div>
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[1]}}">
-        <button class="btn btn-primary gallery-button" (click)="selectFile($event,1)">UPLOAD</button><br>
-
+        <div class="btn btn-primary gallery-button">
+          <input type="file" id="file" (change)="selectFile($event,1)"><label for="file"
+          style="cursor: pointer;">Upload</label>
+        </div><br>
 
       </div>
     </div>
     <div class="row">
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[2]}}">
-        <button class="btn btn-primary gallery-button" (click)="selectFile($event,2)">UPLOAD</button><br>
-
+        <div class="btn btn-primary gallery-button">
+          <input type="file" id="file" (change)="selectFile($event,2)"><label for="file"
+          style="cursor: pointer;">Upload</label>
+        </div><br>
       </div>
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[3]}}">
-        <button class="btn btn-primary gallery-button" (click)="selectFile($event,3)">UPLOAD</button><br>
-
+        <div class="btn btn-primary gallery-button">
+          <input type="file" id="file" (change)="selectFile($event,3)"><label for="file"
+          style="cursor: pointer;">Upload</label>
+        </div><br>
 
       </div>
     </div> 
   </div>
 </div>
 </div>
-</form>
+<div class="container doctor-section" >
+  <div class="row text-center">
+    <h1>OUR DOCTORS</h1>
+  </div>
+  <div class="row allcards">
+    <div class="col">
+      <div class="row cardbackground">
+        <div class="col-4">
+        <img class="cardimage" src="../../assets/download.jpg" >
+        </div>
+        <div class="col">
+          <h1>DR.TULASI</h1>
+        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
 
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <div class="row cardbackground">
+        <div class="col-4">
+        <img class="cardimage" src="../../assets/download.jpg" >
+        </div>
+        <div class="col">
+          <h1>DR.TULASI</h1>
+        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row allcards">
+    <div class="col">
+      <div class="row cardbackground">
+        <div class="col-4">
+        <img class="cardimage" src="../../assets/download.jpg" >
+        </div>
+        <div class="col">
+          <h1>DR.TULASI</h1>
+        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <div class="row cardbackground">
+        <div class="col-4">
+        <img class="cardimage" src="../../assets/download.jpg" >
+        </div>
+        <div class="col">
+          <h1>DR.TULASI</h1>
+        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary">Showmore</button>
+  
+  </div>
+<br>
+  
+</div>
+</form>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 </html>
