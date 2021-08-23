@@ -56,9 +56,12 @@
 
 </head>
 <body>
+
+<form [formGroup]="form">
   <div class="main-info">
     <div class="logo-sec">
         <img src="../../assets/logo-white.png">
+        <button (click)="publish()">Publish</button>
     </div>
     <div class="edit-profile">
         <div >
@@ -84,18 +87,21 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+            <!-- <input formControlName="cauroselone"> -->
+            <ckeditor [editor]="Editor" formControlName="cauroselone"></ckeditor>
+						<!-- <p contenteditable="true"  formControlName="cauroselone" class="testimonial"></p> -->
 						<p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
 					</div>
 					<div class="carousel-item" > 
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-						<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-						<p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+            <ckeditor [editor]="Editor" formControlName="cauroseltwo"></ckeditor>
+
+						<!-- <p contenteditable="true" class="testimonial"></p> -->
 					</div>
 					<div class="carousel-item" >
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-						<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
-						<p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+            <ckeditor [editor]="Editor" formControlName="cauroselthree"></ckeditor>
+						<!-- <p class="testimonial"></p> -->
 					</div>
 				</div>
 				<!-- Carousel controls -->
@@ -109,6 +115,58 @@
 		</div>
 	</div>
 </div>
+<br>
+<br>
+<div class="container">
+<div class="row">
+  <div class="card col" style="width: 25rem;">
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <h5 class="card-title">
+        <ckeditor [editor]="Editor" formControlName="cardtitle"></ckeditor>
+
+      </h5>
+      <p class="card-text">
+        <ckeditor [editor]="Editor" formControlName="cardtext"></ckeditor>
+
+      </p>
+      <button href="#" class="btn btn-primary">Go somewhere</button>
+    </div>
+  </div>
+  <div class="images col">
+    <div class="row">
+      <div class="col gallery-item">
+        <img  class="gallery-img" src="{{imagearray[0]}}">
+        
+        <div class="btn btn-primary gallery-button">
+          <input type="file" id="file" formControlName="image" (change)="selectFile($event,0)"><label for="file"
+          style="cursor: pointer;">Upload</label>
+        </div><br>
+      </div>
+      <div class="col gallery-item">
+        <img class="gallery-img" src="{{imagearray[1]}}">
+        <button class="btn btn-primary gallery-button" (click)="selectFile($event,1)">UPLOAD</button><br>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col gallery-item">
+        <img class="gallery-img" src="{{imagearray[2]}}">
+        <button class="btn btn-primary gallery-button" (click)="selectFile($event,2)">UPLOAD</button><br>
+
+      </div>
+      <div class="col gallery-item">
+        <img class="gallery-img" src="{{imagearray[3]}}">
+        <button class="btn btn-primary gallery-button" (click)="selectFile($event,3)">UPLOAD</button><br>
+
+
+      </div>
+    </div> 
+  </div>
+</div>
+</div>
+</form>
 
 
 </body>
