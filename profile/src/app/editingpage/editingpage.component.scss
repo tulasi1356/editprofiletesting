@@ -104,6 +104,9 @@ h2::after {
 	background: #555;		
 	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
+.imagesectionabove {
+	width: 500px; height: 600px;
+}
 .gallery-item {
     display: inline-block;
     position: relative;
@@ -146,12 +149,15 @@ h2::after {
    // align-items:center;  
   }
   .doctor-section {
-	  background-color: brown;
+	  background-color: black;
 	  margin-top:20px ;
+  }
+ .our-services {
+	  padding: 5%;
   }
   .cardsection {
 	  background-color: white;
-	  width: 500px;
+	  width: 300px;
 	  border-radius: 10px;
 	  display: flex;
 	  flex-direction: row;
@@ -180,17 +186,60 @@ h2::after {
 	  background-color: white;
 	  border-radius: 10px;
 	  padding-bottom:5%;
-	  margin-left: 2%;
+	  margin-left: 2%; 	 	
+  }
+  .serviceflex {
+	  display: flex;
+	  flex-direction: row;
+  }
+  .matter {
+	  display: flex;
+	  flex-direction: column;
   }
   .servicecontent {
 	  padding: 2%;
   }
   .imagesectionservice{
-	border-radius: 60%;
+	// border-radius: 60%;
 	width: 150px;
 	height: 150px;
 	
+	// border: 10px solid lightgray;
+	position: relative;
+    left: -30px;
+
+	// box-shadow: 10spx 10px #888888;
+	
   }
   .cardsinservice {
-	  width: 500px;
+	  width: 400px;
+	//   border-radius: 60%;
+	  border: 10px solid lightgray;
+	//   box-shadow: darkblue;
+  }
+  .recent-news {
+	  background-color: white;
+  }
+  .recentcards{
+	  background-color: black;
+	  color: white;
+	  width: 300px;
+	  border-radius: 0px;
+	//   padding: 2%;
+	// margin/: 2%;
+	
+
+	//   margin-bottom: 10px;
+  }
+  .imagesectioninrecentnews {
+	  width: 300px;
+	  padding: 2%;
+  }
+  .langsection {
+	  font-size: 10px;
+  }
+  .fourcards {
+	display: inline-block;
+	padding: 2%;
+
   }

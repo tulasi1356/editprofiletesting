@@ -61,13 +61,13 @@
   <div class="main-info">
     <div class="logo-sec">
         <img src="../../assets/logo-white.png">
-        <button (click)="publish()">Publish</button>
+        <button *ngIf="!publishvarible" (click)="publish()">Publish</button>
     </div>
-    <div class="edit-profile">
+    <div *ngIf="!publishvarible" class="edit-profile">
         <div >
             <img src="../../assets/arrow_back_black_24dp.svg" >
         </div>
-        <div>
+        <div >
             <h1>&nbsp;&nbsp;&nbsp;Edit Your Profile</h1>
         </div>
     </div>
@@ -88,20 +88,24 @@
 					<div class="carousel-item active">
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
             <!-- <input formControlName="cauroselone"> -->
-            <ckeditor [editor]="Editor" formControlName="cauroselone"></ckeditor>
+            <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cauroselone"></ckeditor>
+            <div  style="color: white;" *ngIf="publishvarible" [innerHtml]="form.value.cauroselone"></div>
 						<!-- <p contenteditable="true"  formControlName="cauroselone" class="testimonial"></p> -->
 						<p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
 					</div>
 					<div class="carousel-item" > 
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-            <ckeditor [editor]="Editor"  formControlName="cauroseltwo"></ckeditor>
-       
+            <ckeditor *ngIf="!publishvarible" [editor]="Editor"  formControlName="cauroseltwo"></ckeditor>
+            <div *ngIf="publishvarible" style="color: white;" [innerHtml]="form.value.cauroseltwo"> 
+            </div>
+ 
 
 						<!-- <p contenteditable="true" class="testimonial"></p> -->
 					</div>
 					<div class="carousel-item" >
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-            <ckeditor [editor]="Editor" formControlName="cauroselthree"></ckeditor>
+            <ckeditor *ngIf="!publishvarible"  [editor]="Editor" formControlName="cauroselthree"></ckeditor>
+            <div *ngIf="publishvarible" style="color: white;" [innerHtml]="form.value.cauroselthree"></div>
 						<!-- <p class="testimonial"></p> -->
 					</div>
 				</div>
@@ -124,13 +128,22 @@
     <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
     <div class="card-body">
       <h5 class="card-title">
-        <ckeditor [editor]="Editor" formControlName="cardtitle"></ckeditor>
+        <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle"></ckeditor>
+        <div *ngIf="publishvarible">
+          <h1 [innerHtml]="form.value.cardtitle"></h1>
+        </div>
 
       </h5>
-      <p class="card-text">
-        <ckeditor [editor]="Editor" formControlName="cardtext"></ckeditor>
-
-      </p>
+      <div class="card-text">
+        <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
+        <div  *ngIf="publishvarible">
+          <br>
+          <br>
+          <div [innerHtml]="form.value.cardtext"></div>
+          <br>
+          <br>
+        </div>
+      </div>
       <button href="#" class="btn btn-primary">Go somewhere</button>
     </div>
   </div>
@@ -139,15 +152,15 @@
       <div class="col gallery-item">
         <img  class="gallery-img" src="{{imagearray[0]}}">
         
-        <div class="btn btn-primary gallery-button">
-          <input type="file" id="file" (change)="selectFile($event,0)"><label for="file"
+        <div *ngIf="!publishvarible" class="btn btn-primary gallery-button">
+          <input  type="file" id="file" (change)="selectFile($event,0)"><label for="file"
           style="cursor: pointer;">Upload</label>
         </div><br>
       </div>
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[1]}}">
-        <div class="btn btn-primary gallery-button">
-          <input type="file" id="file" (change)="selectFile($event,1)"><label for="file"
+        <div *ngIf="!publishvarible" class="btn btn-primary gallery-button">
+          <input id="myfile" type="file"  (change)="selectFile($event,1)"><label for="myfile"
           style="cursor: pointer;">Upload</label>
         </div><br>
 
@@ -156,15 +169,15 @@
     <div class="row">
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[2]}}">
-        <div class="btn btn-primary gallery-button">
-          <input type="file" id="file" (change)="selectFile($event,2)"><label for="file"
+        <div  *ngIf="!publishvarible" class="btn btn-primary gallery-button">
+          <input  type="file" id="file2" (change)="selectFile($event,2)"><label for="file2"
           style="cursor: pointer;">Upload</label>
         </div><br>
       </div>
       <div class="col gallery-item">
         <img class="gallery-img" src="{{imagearray[3]}}">
-        <div class="btn btn-primary gallery-button">
-          <input type="file" id="file" (change)="selectFile($event,3)"><label for="file"
+        <div *ngIf="!publishvarible"  class="btn btn-primary gallery-button">
+          <input type="file" id="file3" (change)="selectFile($event,3)"><label for="file3"
           style="cursor: pointer;">Upload</label>
         </div><br>
 
@@ -173,9 +186,43 @@
   </div>
 </div>
 </div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <img class="imagesectionabove" src="../../assets/download.jpg" > 
+    </div>
+    <div class="card col" style="width: 25rem; height: 30rem;">
+      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+      <div class="card-body">
+        <h5 class="card-title">
+          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle"></ckeditor>
+          <div *ngIf="publishvarible">
+            <h1 [innerHtml]="form.value.cardtitle"></h1>
+          </div>
+  
+        </h5>
+        <div class="card-text">
+          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
+          <div  *ngIf="publishvarible">
+            <br>
+            <br>
+            <div [innerHtml]="form.value.cardtext"></div>
+            <br>
+            <br>
+          </div>
+        </div>
+        <button href="#" class="btn btn-primary">Go somewhere</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
 <div class="container doctor-section" >
   <div class="row text-center">
-    <h1>OUR DOCTORS</h1>
+    <h1 style="color: white;">OUR DOCTORS</h1>
   </div>
   <div class="row allcards">
     <div class="col">
@@ -185,7 +232,8 @@
         </div>
         <div class="col">
           <h1>DR.TULASI</h1>
-        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+        <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+        <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
 
         </div>
         
@@ -198,8 +246,8 @@
         </div>
         <div class="col">
           <h1>DR.TULASI</h1>
-        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
         </div>
         
       </div>
@@ -213,8 +261,8 @@
         </div>
         <div class="col">
           <h1>DR.TULASI</h1>
-        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
         </div>
         
       </div>
@@ -226,8 +274,8 @@
         </div>
         <div class="col">
           <h1>DR.TULASI</h1>
-        <ckeditor  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
         </div>
         
       </div>
@@ -240,10 +288,9 @@
 <br>
   
 </div>
-</form>
 <br>
 <br>
-<!-- <div class="container our-services" style="background-color: white;">
+<div class="container our-services" style="background-color: white;">
   <div class="text-center">
     <h1>Our Services</h1>
   </div>
@@ -251,26 +298,69 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta reprehenderit autem exercitationem dicta quae consequuntur dolores, 
     repudiandae maxime aut omnis cum amet consequatur tempora praesentium quibusdam officia vel doloremque?
   </div>
-  <div class="row cardsinservice" style="background-color: violet;">
-    <div class="col">
-      <img class="imagesectionservice" src="../../assets/download.jpg">
-    </div>
-    <div class="col">
-      <h1>Consultation</h1>
-      <p>Next Avalible Time</p>
-      <p>Today 10:40</p>
-    </div>
-    <div class="col">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
-    <div class="row">
-      <button href="#" class="btn btn-primary">Get Appointment</button>
-    </div>
-  </div>
+  
 
-</div> -->
+
+
+
+</div>
+<br>
+<div class="container recent-news">
+  <br>
+  <br>
+  <div class="text-center row">
+    <h1>Recent News</h1>
+  </div> 
+<div class="fourcards" *ngFor="let a of imagearray1 let i=index">
+  <div  class="card recentcards">
+    <div class="gallery-item">
+    <img class="card-img-top imagesectioninrecentnews" src="{{imagearray1[i]}}" alt="Card image cap">
+    <div *ngIf="!publishvarible" class="gallery-button btn btn-primary">
+      <!-- selectCardFile -->
+      <input type="file" [id]="i" (change)="selectCardFile($event,i)"><label for="{{i}}"
+      style="cursor: pointer;">Edit Details<img src="../../assets/edit_black_24dp.svg"></label>
+      <!-- <button class=" " select> </button> -->
+    
+      </div>
+    </div>
+    <div class="card-body">
+
+        <ckeditor style="color: black;" *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle"></ckeditor>
+        <div *ngIf="publishvarible">
+          <h1 [innerHtml]="form.value.cardtitle"></h1>
+        </div>
+      
+        <ckeditor style="color: black;" *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
+        <div *ngIf="publishvarible">
+          <div [innerHtml]="form.value.cardtext"></div>
+        </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col langsection">
+          <img src="../../assets/language_black_24dp.svg" >Long Name Here
+        </div>
+        <div class="col langsection">
+          <img src="../../assets/access_time_black_24dp.svg">1 hr ago
+        </div>
+      </div>
+    </div>
+    
+  </div>
+ 
+</div>
+<div class="text-center">
+  <button class="btn btn-primary ">See More News</button>
+
+</div>
+
+  <br>
+  <br>
+</div>
+</form>
 <br>
 <br>
+
 
 <br>
 <br>

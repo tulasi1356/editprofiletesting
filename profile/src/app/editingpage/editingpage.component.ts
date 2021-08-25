@@ -11,8 +11,12 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export class EditingpageComponent implements OnInit {
   form: any;  
   public Editor = ClassicEditor;
+  public publishvarible=false;
   public imagearray=['../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg'];
-  constructor(private fb: FormBuilder) { 
+  public imagearray1=['../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg'];
+
+  constructor(private fb: FormBuilder) {
+ 
     this.form = this.fb.group({
       cauroselone: new FormControl('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.', Validators.required),
       cauroseltwo: new FormControl('Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.Antonio Moreno Web Developer', Validators.required),
@@ -20,7 +24,9 @@ export class EditingpageComponent implements OnInit {
       cardtitle: new FormControl('Lorem ipsum dolor sit amet',Validators.required),
       cardtext: new FormControl('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.', Validators.required),
       doctortext1:new FormControl('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper mal.', Validators.required),
-
+      // cardsarray: new FormArray([
+      //   // this.initQuestion(),
+      // ]),
       // alternatesubtopics: this.fb.array([], Validators.required)
     })
   }
@@ -28,7 +34,7 @@ export class EditingpageComponent implements OnInit {
   ngOnInit(): void {
   }
   publish() {
-    console.log(this.form.value);
+    this.publishvarible=true;
   }
   selectFile(event,i) {
     console.log('i=',i);
@@ -40,6 +46,21 @@ export class EditingpageComponent implements OnInit {
       reader.onload = (event: any) => {
         // this.imagechecking = true;
         this.imagearray[i] = event.target.result;
+      }
+      reader.readAsDataURL(file);
+
+    }
+  }
+  selectCardFile(event,i) {
+    console.log('i=',i);
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0]
+      this.imagearray1[i] = event.target.
+      files[0]
+      var reader = new FileReader();
+      reader.onload = (event: any) => {
+        // this.imagechecking = true;
+        this.imagearray1[i] = event.target.result;
       }
       reader.readAsDataURL(file);
 

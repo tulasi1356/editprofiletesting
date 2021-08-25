@@ -22,6 +22,11 @@
       "dom"
     ]
   },
+  "CKEDITOR.editorConfig":
+  {
+  "config.language":"en",
+  "enterMode" : "CKEDITOR.ENTER_BR"
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
