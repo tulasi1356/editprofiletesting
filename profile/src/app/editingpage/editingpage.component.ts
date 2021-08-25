@@ -35,6 +35,15 @@ export class EditingpageComponent implements OnInit {
   }
   publish() {
     this.publishvarible=true;
+    console.log(this.form.value,'pppppppp')
+    var object = {}
+    object['cauroselone']=this.form.value.cauroselone;
+    object['cauroseltwo']=this.form.value.cauroseltwo;
+    object['cauroselthree']=this.form.value.cauroselthree
+    object['cardtitle']=this.form.value.cardtitle
+    object['cardtext'] = this.form.value.cardtext
+    object['doctortext1']=this.form.value.doctortext1
+    console.log(object)
   }
   selectFile(event,i) {
     console.log('i=',i);
