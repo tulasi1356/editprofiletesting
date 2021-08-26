@@ -72,25 +72,22 @@
         </div>
     </div>
 </div>
-<div class="containerfluid-xl">
+<!-- <div class="containerfluid-xl">
 	<div class="row">
 		<div class="col-lg-8 mx-auto">
       <br>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Carousel indicators -->
+
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 				</ol>   
-				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
-            <!-- <input formControlName="cauroselone"> -->
             <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cauroselone"></ckeditor>
             <div  style="color: white;" *ngIf="publishvarible" [innerHtml]="form.value.cauroselone"></div>
-						<!-- <p contenteditable="true"  formControlName="cauroselone" class="testimonial"></p> -->
 						<p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
 					</div>
 					<div class="carousel-item" > 
@@ -100,16 +97,13 @@
             </div>
  
 
-						<!-- <p contenteditable="true" class="testimonial"></p> -->
-					</div>
+							</div>
 					<div class="carousel-item" >
 						<div class="img-box"><img src="../../assets/download.jpg" alt=""></div>
             <ckeditor *ngIf="!publishvarible"  [editor]="Editor" formControlName="cauroselthree"></ckeditor>
             <div *ngIf="publishvarible" style="color: white;" [innerHtml]="form.value.cauroselthree"></div>
-						<!-- <p class="testimonial"></p> -->
-					</div>
+						</div>
 				</div>
-				<!-- Carousel controls -->
 				<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
 					<i class="fa fa-angle-left"></i>
 				</a>
@@ -119,12 +113,19 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+
+<div class="gapsection"></div>
+
+<div class="headimage">
+  <img src="../../assets/download.jpg" style="width: 100%; height: 500px;">
 </div>
-<br>
-<br>
+<div class="gapsection"></div>
+
+
 <div class="container">
 <div class="row">
-  <div class="card col" style="width: 25rem;">
+  <div class="card col-lg col-sm-12" style="width: 25rem;color:#545871">
     <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
     <div class="card-body">
       <h5 class="card-title">
@@ -137,19 +138,16 @@
       <div class="card-text">
         <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
         <div  *ngIf="publishvarible">
-          <br>
-          <br>
           <div [innerHtml]="form.value.cardtext"></div>
-          <br>
-          <br>
+
         </div>
       </div>
       <button href="#" class="btn btn-primary">Go somewhere</button>
     </div>
   </div>
-  <div class="images col">
+  <div class="images col-lg col-sm-12">
     <div class="row">
-      <div class="col gallery-item">
+      <div class="col-lg col-sm-12 gallery-item">
         <img  class="gallery-img" src="{{imagearray[0]}}">
         
         <div *ngIf="!publishvarible" class="btn btn-primary gallery-button">
@@ -157,7 +155,7 @@
           style="cursor: pointer;">Upload</label>
         </div><br>
       </div>
-      <div class="col gallery-item">
+      <div class="col-lg col-sm-12 gallery-item">
         <img class="gallery-img" src="{{imagearray[1]}}">
         <div *ngIf="!publishvarible" class="btn btn-primary gallery-button">
           <input id="myfile" type="file"  (change)="selectFile($event,1)"><label for="myfile"
@@ -167,14 +165,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col gallery-item">
+      <div class="col-lg col-sm-12 gallery-item">
         <img class="gallery-img" src="{{imagearray[2]}}">
         <div  *ngIf="!publishvarible" class="btn btn-primary gallery-button">
           <input  type="file" id="file2" (change)="selectFile($event,2)"><label for="file2"
           style="cursor: pointer;">Upload</label>
         </div><br>
       </div>
-      <div class="col gallery-item">
+      <div class="col-lg col-sm-12 gallery-item">
         <img class="gallery-img" src="{{imagearray[3]}}">
         <div *ngIf="!publishvarible"  class="btn btn-primary gallery-button">
           <input type="file" id="file3" (change)="selectFile($event,3)"><label for="file3"
@@ -186,16 +184,17 @@
   </div>
 </div>
 </div>
-<br>
-<br>
-<div class="container">
-  <div class="row">
 
-    <div class="col">
+<div class="gapsection"></div>
+
+
+<div class="">
+  <div class="doctorcardsection">
+
+    <div class="">
       <img class="imagesectionabove" src="../../assets/download.jpg" > 
     </div>
-    <div class="card col" style="width: 25rem; height: 30rem;">
-      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card doctorcardsectioncard">
       <div class="card-body">
         <h5 class="card-title">
           <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle"></ckeditor>
@@ -207,11 +206,9 @@
         <div class="card-text">
           <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
           <div  *ngIf="publishvarible">
-            <br>
-            <br>
+ 
             <div [innerHtml]="form.value.cardtext"></div>
-            <br>
-            <br>
+
           </div>
         </div>
         <button href="#" class="btn btn-primary">Go somewhere</button>
@@ -220,17 +217,19 @@
   </div>
   </div>
 
-<div class="container doctor-section" >
+  <div class="gapsection"></div>
+
+<div class="doctor-section" >
   <div class="row text-center">
     <h1 style="color: white;">OUR DOCTORS</h1>
   </div>
   <div class="row allcards">
-    <div class="col">
+    <div class="col-lg">
       <div class="row cardbackground">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-12">
         <img class="cardimage" src="../../assets/download.jpg" >
         </div>
-        <div class="col">
+        <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
         <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
         <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
@@ -239,12 +238,12 @@
         
       </div>
     </div>
-    <div class="col">
+    <div class="col-lg">
       <div class="row cardbackground">
-        <div class="col-4">
+        <div class="col-lg-4  col-sm-12">
         <img class="cardimage" src="../../assets/download.jpg" >
         </div>
-        <div class="col">
+        <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
           <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
           <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
@@ -254,12 +253,12 @@
     </div>
   </div>
   <div class="row allcards">
-    <div class="col">
+    <div class="col-lg">
       <div class="row cardbackground">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-12">
         <img class="cardimage" src="../../assets/download.jpg" >
         </div>
-        <div class="col">
+        <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
           <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
           <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
@@ -267,12 +266,12 @@
         
       </div>
     </div>
-    <div class="col">
+    <div class="col-lg">
       <div class="row cardbackground">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-12">
         <img class="cardimage" src="../../assets/download.jpg" >
         </div>
-        <div class="col">
+        <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
           <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
           <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
@@ -288,9 +287,12 @@
 <br>
   
 </div>
-<br>
-<br>
-<div class="container our-services" style="background-color: white;">
+
+
+<!-- <div class="gapsection"></div> -->
+
+
+<div class="container our-services" >
   <div class="text-center">
     <h1>Our Services</h1>
   </div>
@@ -298,13 +300,138 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta reprehenderit autem exercitationem dicta quae consequuntur dolores, 
     repudiandae maxime aut omnis cum amet consequatur tempora praesentium quibusdam officia vel doloremque?
   </div>
+<div class="allcardsinservice" style="margin-left: 10%;">
+  
+  <!-- <div class="card servicecard">
+    <div class="mainmatter row">
+      <div class="imageservicecard col-lg-4 col-sm-4 col-4">
+        <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+      </div>
+      <div class="moreoption col-lg-2 col-sm-2 col-8" style="text-align: right;">
+        <img src="../../assets/more_horiz_black_24dp.svg">
+      </div>
+      <div class="contentservice  col-lg-6 col-sm-12">
+        <h1>Consultation</h1>
+        <h4>Next Avalible Time</h4>
+        <h4>Today 1:40 PM</h4>
+      </div>
+      
+    </div>
+</div> -->
+
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-lg-4 col-sm-4 col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="col-lg-8">
+      <div class="row moreoption">
+        <div class="moreoption col-lg-2 col-sm-2 col-8" style="text-align: right;">
+          <img src="../../assets/more_horiz_black_24dp.svg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="contentservice  col-lg-6 col-sm-12">
+          <h1>Consultation</h1>
+          <h4>Next Avalible Time</h4>
+          <h4>Today 1:40 PM</h4>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="contentservice  col-6">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    <div class="moreoption col-2">
+      <img src="../../assets/more_horiz_black_24dp.svg">
+    </div>
+  </div>
+</div>
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="contentservice  col-6">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    <div class="moreoption col-2">
+      <img src="../../assets/more_horiz_black_24dp.svg">
+    </div>
+  </div>
+</div>
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="contentservice  col-6">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    <div class="moreoption col-2">
+      <img src="../../assets/more_horiz_black_24dp.svg">
+    </div>
+  </div>
+</div>
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="contentservice  col-6">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    <div class="moreoption col-2">
+      <img src="../../assets/more_horiz_black_24dp.svg">
+    </div>
+  </div>
+</div>
+<div class="card servicecard">
+  <div class="mainmatter row">
+    <div class="imageservicecard col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+    <div class="contentservice  col-6">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    <div class="moreoption col-2">
+      <img src="../../assets/more_horiz_black_24dp.svg">
+    </div>
+  </div>
+</div>
+</div>
+  
   
 
 
 
 
 </div>
-<br>
+
+
+
+<div class="gapsection"></div>
+
+
+
 <div class="container recent-news">
   <br>
   <br>
@@ -354,20 +481,15 @@
 
 </div>
 
-  <br>
-  <br>
+
 </div>
 </form>
-<br>
-<br>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 </body>
 </html>
+
+
+
+
+

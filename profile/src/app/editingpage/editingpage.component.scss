@@ -6,7 +6,7 @@
     padding: 1%;
 }
 body {
-    background-color: black;
+    background-color: white;
     overflow-x: hidden;
     // height: 100%;
 
@@ -105,7 +105,7 @@ h2::after {
 	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
 .imagesectionabove {
-	width: 500px; height: 600px;
+	width: 800px; height: 600px;
 }
 .gallery-item {
     display: inline-block;
@@ -243,3 +243,102 @@ h2::after {
 	padding: 2%;
 
   }
+
+
+
+
+
+
+.allcardsinservice {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	// margin-left: 20%;
+	justify-content: space-between;
+	// margin-bottom: 10px;
+	// background-color: maroon;
+}
+.doctorcardsection {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+
+
+}
+.doctorcardsectioncard {
+	width: 600px;
+}
+.mainmatter {
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: space-between;
+	margin-top: 3%;
+	
+	// flex-wrap: r;
+}
+.servicecard {
+	width: 400px;
+	height: 200px;
+	// position: relative;
+	border: 1pt solid #E8E8E8;
+	border-radius: 10px;
+	box-shadow: 2pt 4pt 6pt 0pt #00000029;
+	margin-bottom: 10px;
+	
+
+}
+
+.imgstylingservice {
+	border: 1pt solid #E8E8E8;
+	width: 150px;
+	height: 150px;
+	margin-left: -20%;
+	box-shadow: -3pt 22pt 6pt 0pt #00000029;
+
+	// background-color: lightsalmon;
+}
+.contentservice {
+	// background-color:/ lightgreen;
+	width: 300px;
+}
+.moreoption {
+	// background-color: magenta;
+}
+
+.gapsection {
+	// background-color: maroon;
+	padding: 2%;
+}
+@media only screen and (max-width: 600px) {
+	.imgstylingservice {
+		margin-left: 0%;
+	}
+	.servicecard {
+		height: 400px;
+	}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
