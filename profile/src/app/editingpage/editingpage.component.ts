@@ -14,7 +14,8 @@ export class EditingpageComponent implements OnInit {
   public publishvarible=false;
   public imagearray=['../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg'];
   public imagearray1=['../../assets/download.jpg','../../assets/download.jpg','../../assets/download.jpg'];
-
+  states: string[] = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware'];
   constructor(private fb: FormBuilder) {
  
     this.form = this.fb.group({

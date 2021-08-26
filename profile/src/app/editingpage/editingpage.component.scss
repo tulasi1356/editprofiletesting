@@ -287,12 +287,15 @@ h2::after {
 	
 
 }
-
+.imageservicecard {
+	margin-top: -5%;
+}
 .imgstylingservice {
 	border: 1pt solid #E8E8E8;
 	width: 150px;
 	height: 150px;
 	margin-left: -20%;
+	// margin-top: -5%;
 	box-shadow: -3pt 22pt 6pt 0pt #00000029;
 
 	// background-color: lightsalmon;
@@ -301,9 +304,7 @@ h2::after {
 	// background-color:/ lightgreen;
 	width: 300px;
 }
-.moreoption {
-	// background-color: magenta;
-}
+
 
 .gapsection {
 	// background-color: maroon;
@@ -314,7 +315,7 @@ h2::after {
 		margin-left: 0%;
 	}
 	.servicecard {
-		height: 400px;
+		height: 300px;
 	}
   }
 

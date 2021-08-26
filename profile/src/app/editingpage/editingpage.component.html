@@ -115,7 +115,7 @@
 	</div>
 </div> -->
 
-<div class="gapsection"></div>
+<!-- <div class="gapsection"></div> -->
 
 <div class="headimage">
   <img src="../../assets/download.jpg" style="width: 100%; height: 500px;">
@@ -223,6 +223,26 @@
   <div class="row text-center">
     <h1 style="color: white;">OUR DOCTORS</h1>
   </div>
+  <div class="row text-center">
+    <div class="col-lg-6 col-sm-12">
+      <mat-form-field appearance="fill" style="background-color: white;width: 400px;">
+        <mat-label>State</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <mat-form-field appearance="fill" style="background-color: white;width: 400px;">
+        <mat-label>State</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
   <div class="row allcards">
     <div class="col-lg">
       <div class="row cardbackground">
@@ -300,123 +320,167 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta reprehenderit autem exercitationem dicta quae consequuntur dolores, 
     repudiandae maxime aut omnis cum amet consequatur tempora praesentium quibusdam officia vel doloremque?
   </div>
-<div class="allcardsinservice" style="margin-left: 10%;">
+
+  <div class="row text-center">
+    <div class="col-lg-6 col-sm-12">
+      <mat-form-field appearance="fill" style="width: 400px;background-color: black;">
+        <mat-label style="color: white;">State</mat-label>
+        <mat-select>
+          <mat-option style="color: white;">None</mat-option>
+          <mat-option style="color: white;background-color: black;" *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <mat-form-field appearance="fill" style="width: 400px;">
+        <mat-label>State</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+<div class="allcardsinservice text-center" >
   
-  <!-- <div class="card servicecard">
-    <div class="mainmatter row">
-      <div class="imageservicecard col-lg-4 col-sm-4 col-4">
+  <div class="card servicecard" >
+    <div class="mainmatter">
+        <div class="row">
+
+        <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
+            <img src="../../assets/more_horiz_black_24dp.svg">
+          </div>
+        </div>
+        <div class="row">
+      <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
         <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
       </div>
-      <div class="moreoption col-lg-2 col-sm-2 col-8" style="text-align: right;">
-        <img src="../../assets/more_horiz_black_24dp.svg">
-      </div>
-      <div class="contentservice  col-lg-6 col-sm-12">
+    
+      <div class="contentservice  col-lg-6 col-sm-12 col-12">
         <h1>Consultation</h1>
         <h4>Next Avalible Time</h4>
         <h4>Today 1:40 PM</h4>
       </div>
       
     </div>
-</div> -->
+</div>
+</div> 
 
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-lg-4 col-sm-4 col-4">
-      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
-    </div>
-    <div class="col-lg-8">
-      <div class="row moreoption">
-        <div class="moreoption col-lg-2 col-sm-2 col-8" style="text-align: right;">
+<div class="card servicecard" >
+  <div class="mainmatter">
+      <div class="row">
+
+      <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
           <img src="../../assets/more_horiz_black_24dp.svg">
         </div>
       </div>
       <div class="row">
-        <div class="contentservice  col-lg-6 col-sm-12">
-          <h1>Consultation</h1>
-          <h4>Next Avalible Time</h4>
-          <h4>Today 1:40 PM</h4>
+    <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+  
+    <div class="contentservice  col-lg-6 col-sm-12 col-12">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    
+  </div>
+</div>
+</div> 
+
+
+
+<div class="card servicecard" >
+  <div class="mainmatter">
+      <div class="row">
+
+      <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
+          <img src="../../assets/more_horiz_black_24dp.svg">
         </div>
       </div>
+      <div class="row">
+    <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
     </div>
+  
+    <div class="contentservice  col-lg-6 col-sm-12 col-12">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
     </div>
-    </div>
+    
+  </div>
+</div>
+</div> 
+<div class="card servicecard" >
+  <div class="mainmatter">
+      <div class="row">
 
+      <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
+          <img src="../../assets/more_horiz_black_24dp.svg">
+        </div>
+      </div>
+      <div class="row">
+    <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
+      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
+    </div>
+  
+    <div class="contentservice  col-lg-6 col-sm-12 col-12">
+      <h1>Consultation</h1>
+      <h4>Next Avalible Time</h4>
+      <h4>Today 1:40 PM</h4>
+    </div>
+    
+  </div>
+</div>
+</div> 
+<div class="card servicecard" >
+  <div class="mainmatter">
+      <div class="row">
 
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-4">
+      <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
+          <img src="../../assets/more_horiz_black_24dp.svg">
+        </div>
+      </div>
+      <div class="row">
+    <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
       <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
     </div>
-    <div class="contentservice  col-6">
+  
+    <div class="contentservice  col-lg-6 col-sm-12 col-12">
       <h1>Consultation</h1>
       <h4>Next Avalible Time</h4>
       <h4>Today 1:40 PM</h4>
     </div>
-    <div class="moreoption col-2">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
+    
   </div>
 </div>
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-4">
+</div> 
+
+<div class="card servicecard" >
+  <div class="mainmatter">
+      <div class="row">
+
+      <div class="col-lg-11 col-sm-2 col-11" style="text-align: right;">
+          <img src="../../assets/more_horiz_black_24dp.svg">
+        </div>
+      </div>
+      <div class="row">
+    <div class="imageservicecard col-lg-4 col-md-4 col-sm-4 col-4">
       <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
     </div>
-    <div class="contentservice  col-6">
+  
+    <div class="contentservice  col-lg-6 col-sm-12 col-12">
       <h1>Consultation</h1>
       <h4>Next Avalible Time</h4>
       <h4>Today 1:40 PM</h4>
     </div>
-    <div class="moreoption col-2">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
+    
   </div>
 </div>
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-4">
-      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
-    </div>
-    <div class="contentservice  col-6">
-      <h1>Consultation</h1>
-      <h4>Next Avalible Time</h4>
-      <h4>Today 1:40 PM</h4>
-    </div>
-    <div class="moreoption col-2">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
-  </div>
-</div>
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-4">
-      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
-    </div>
-    <div class="contentservice  col-6">
-      <h1>Consultation</h1>
-      <h4>Next Avalible Time</h4>
-      <h4>Today 1:40 PM</h4>
-    </div>
-    <div class="moreoption col-2">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
-  </div>
-</div>
-<div class="card servicecard">
-  <div class="mainmatter row">
-    <div class="imageservicecard col-4">
-      <img class="rounded-circle imgstylingservice" src="../../assets/download.jpg" >
-    </div>
-    <div class="contentservice  col-6">
-      <h1>Consultation</h1>
-      <h4>Next Avalible Time</h4>
-      <h4>Today 1:40 PM</h4>
-    </div>
-    <div class="moreoption col-2">
-      <img src="../../assets/more_horiz_black_24dp.svg">
-    </div>
-  </div>
-</div>
+</div> 
 </div>
   
   
