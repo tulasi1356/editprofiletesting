@@ -61,7 +61,11 @@
   <div class="main-info">
     <div class="logo-sec">
         <img src="../../assets/logo-white.png">
-        <button *ngIf="!publishvarible" (click)="publish()">Publish</button>
+        <!-- <button >See More News</button> -->
+        <span>
+        <button class="btn btn-primary " *ngIf="!publishvarible" (click)="publish()">Publish</button>
+          </span>
+
     </div>
     <div *ngIf="!publishvarible" class="edit-profile">
         <div >
@@ -116,10 +120,20 @@
 </div> -->
 
 <!-- <div class="gapsection"></div> -->
+<div id="box-search">
+  <div class="thumbnail">
+    <img class="imgbackground" src="../../assets/download.jpg" style="width: 100%; height: 500px;">
 
-<div class="headimage">
-  <img src="../../assets/download.jpg" style="width: 100%; height: 500px;">
+      <!-- <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Granola03242006.JPG/280px-Granola03242006.JPG" alt=""> -->
+      <div class="caption">
+        <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="caption"></ckeditor>
+        <div *ngIf="publishvarible">
+          <h1 [innerHtml]="form.value.caption"></h1>
+        </div>
+      </div>
+  </div>
 </div>
+
 <div class="gapsection"></div>
 
 
@@ -197,17 +211,17 @@
     <div class="card doctorcardsectioncard">
       <div class="card-body">
         <h5 class="card-title">
-          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle"></ckeditor>
+          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtitle2"></ckeditor>
           <div *ngIf="publishvarible">
-            <h1 [innerHtml]="form.value.cardtitle"></h1>
+            <h1 [innerHtml]="form.value.cardtitle2"></h1>
           </div>
   
         </h5>
         <div class="card-text">
-          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext"></ckeditor>
+          <ckeditor *ngIf="!publishvarible" [editor]="Editor" formControlName="cardtext2"></ckeditor>
           <div  *ngIf="publishvarible">
  
-            <div [innerHtml]="form.value.cardtext"></div>
+            <div [innerHtml]="form.value.cardtext2"></div>
 
           </div>
         </div>
@@ -225,7 +239,7 @@
   </div>
   <div class="row text-center">
     <div class="col-lg-6 col-sm-12">
-      <mat-form-field appearance="fill" style="background-color: white;width: 400px;">
+      <mat-form-field appearance="fill" style="background-color: white;">
         <mat-label>State</mat-label>
         <mat-select>
           <mat-option>None</mat-option>
@@ -234,7 +248,7 @@
       </mat-form-field>
     </div>
     <div class="col-lg-6 col-sm-12">
-      <mat-form-field appearance="fill" style="background-color: white;width: 400px;">
+      <mat-form-field appearance="fill" style="background-color: white;">
         <mat-label>State</mat-label>
         <mat-select>
           <mat-option>None</mat-option>
@@ -265,8 +279,8 @@
         </div>
         <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
-          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext2"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext2"></div>
         </div>
         
       </div>
@@ -280,8 +294,8 @@
         </div>
         <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
-          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext3"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext3"></div>
         </div>
         
       </div>
@@ -293,8 +307,8 @@
         </div>
         <div class="col-lg col-sm-12">
           <h1>DR.TULASI</h1>
-          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext1"></ckeditor>
-          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext1"></div>
+          <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="doctortext4"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.doctortext4"></div>
         </div>
         
       </div>
@@ -317,22 +331,22 @@
     <h1>Our Services</h1>
   </div>
   <div class="row servicecontent">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta reprehenderit autem exercitationem dicta quae consequuntur dolores, 
-    repudiandae maxime aut omnis cum amet consequatur tempora praesentium quibusdam officia vel doloremque?
-  </div>
+    <ckeditor *ngIf="!publishvarible"  [editor]="Editor" style="width:60%;" formControlName="servicecontent" style="width: 100%;"></ckeditor>
+          <div *ngIf="publishvarible" [innerHtml]="form.value.servicecontent"></div>
+     </div>
 
-  <div class="row text-center">
-    <div class="col-lg-6 col-sm-12">
-      <mat-form-field appearance="fill" style="width: 400px;background-color: black;">
-        <mat-label style="color: white;">State</mat-label>
+  <div class="row container" >
+    <div class="col-lg-7 col-sm-12">
+      <mat-form-field  appearance="fill" >
+        <mat-label>State</mat-label>
         <mat-select>
-          <mat-option style="color: white;">None</mat-option>
-          <mat-option style="color: white;background-color: black;" *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+          <mat-option >None</mat-option>
+          <mat-option class="optionselect" *ngFor="let state of states" [value]="state">{{state}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="col-lg-6 col-sm-12">
-      <mat-form-field appearance="fill" style="width: 400px;">
+    <div class="col-lg-5 col-sm-12">
+      <mat-form-field appearance="fill" >
         <mat-label>State</mat-label>
         <mat-select>
           <mat-option>None</mat-option>
@@ -552,6 +566,8 @@
 
 </body>
 </html>
+
+
 
 
 

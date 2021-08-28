@@ -1,4 +1,33 @@
+.mat-form-field {
+	width: 400px;
+}
 
+.imgbackground {
+    display: block;
+	// width: 500px;
+	// height: 500px;
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+	width: 100%;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    // color: white;
+    font-weight: bold;
+}
+.logo-sec {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 .edit-profile {
     background-color: white;
     display: flex;
