@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { EditingpageComponent } from './editingpage/editingpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
+import { HttpClientModule } from "@angular/common/http";
 
 
 import {MatSelectModule} from '@angular/material/select';
@@ -30,6 +30,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
     NgbModule,
     MatSelectModule,

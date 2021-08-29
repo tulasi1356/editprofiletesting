@@ -1,0 +1,42 @@
+[
+    {
+      "logourl":"../../assets/logo-white.png",
+      "publishbutton":"Publish",
+      "arrowurl":"../../assets/arrow_back_black_24dp.svg",
+      "EditYourProfile":"Edit Your Profile",
+      "mainheadimageurl":"../../assets/download.jpg",
+      "captionofheadimage":"Welcome to hawk Hospital",
+      "fourimageheading":"Lorem ipsum dolor sit amet",
+      "fourimagedescription":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.",
+      "Gosomewherebutton":"Go somewhere",
+      "fourimages":["../../assets/download.jpg","../../assets/download.jpg","../../assets/download.jpg","../../assets/download.jpg"],
+      "Uploadbutton":"Upload",
+      "oneimageurl":"../../assets/download.jpg",
+      "oneimageheading":"Lorem ipsum dolor sit amet",
+      "oneimagedescription":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.",
+      "OURDOCTORS":"OUR DOCTORS",
+      "DoctorName":"DR.TULASI",
+      "Doctordescription":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.",
+      "Showmorebutton":"Showmore",
+      "OurServices":"Our Services",
+      "OurServicescontent":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.",
+      "Ourserviceimage":"../../assets/download.jpg",
+      "Consultation":"Consultation",
+      "NextAvalibleTime":"Next Avalible Time",
+      "time":"Today 1:40 PM",
+      "horizontelarrow":"../../assets/more_horiz_black_24dp.svg",
+      "RecentNews":"Recent News",
+      "RecentNewsimage":"../../assets/download.jpg",
+      "RecentNewsedit":"Edit Details",
+      "editicon":"../../assets/edit_black_24dp.svg",
+      "RecentNewshead":"Lorem ipsum dolor sit amet",
+      "RecentNewscontent":"Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet",
+      "languageicon":"../../assets/language_black_24dp.svg",
+      "languagematter":"Long Name Here",
+      "timeicon":"../../assets/access_time_black_24dp.svg",
+      "timeiconcontent":"1 hr ago",
+      "seemorenews":"See More News"
+
+    }
+
+  ]
