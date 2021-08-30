@@ -166,7 +166,7 @@
         <img  class="gallery-img" src="{{image}}">
         
         <div *ngIf="!publishvarible" class="btn btn-primary gallery-button">
-          <input  type="file" id="file" (change)="selectFile($event,i)"><label for="file"
+          <input  type="file" id="{{i}}" (change)="selectFile($event,i)"><label for="{{i}}"
           style="cursor: pointer;">{{data[0].Uploadbutton}} {{i}}</label>
         </div>
       </div>
